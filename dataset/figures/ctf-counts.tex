@@ -1,0 +1,58 @@
+\documentclass[border=5pt]{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplots}     % Pretty plots
+\usetikzlibrary{patterns} % Filling the bar chart
+\pgfplotsset{compat=1.15} % Suppress pgfplots warnings
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    bar shift=-2.5pt,
+    bar width=5pt,
+    ybar stacked,
+    ymin=0,
+    ymax=200,
+    ylabel={Number of events},
+    symbolic x coords={2012,2013,2014,2015,2016,2017,2018,2019,2020},
+    xtick=data,
+    xtick style={draw=none},
+    legend style={at={(0.3,-0.15)}, anchor=north,legend columns=-1}, % position of legend
+    nodes near coords, % puts numbers on bars
+    x=1.4cm, % spacing between items on x
+    enlarge x limits=0.07, % enlarges left and right limit, space before bar and edge of table
+    every node near coord/.append style={xshift=-0.4cm,yshift=0.3cm,anchor=north,font=\footnotesize},
+     % style of numbers on bars
+    ]
+
+  \addplot+[ybar, black, fill=gray!50] plot coordinates {(2012,25) (2013,42) (2014,50) (2015,67) (2016,93) (2017,127) (2018,137) (2019,178) (2020,130)};
+  \addplot+[ybar, black, fill=white] plot coordinates {(2012,10) (2013,13) (2014,8) (2015,12) (2016,14) (2017,14) (2018,16) (2019,20) (2020,13)};
+  \legend{Jeopardy / Hack Quest\hspace{3mm} , Attack-Defense}
+\end{axis}
+
+\begin{axis}[
+    hide axis,
+    bar shift=2.5pt,
+    bar width=5pt,
+    ybar stacked,
+    ymin=0,
+    ymax=200,
+    symbolic x coords={2012,2013,2014,2015,2016,2017,2018,2019,2020},
+    xtick=data,
+    legend style={at={(0.8,-0.15)}, anchor=north,legend columns=-1}, % position of legend
+    nodes near coords, % puts numbers on bars
+    x=1.4cm, % spacing between items on x
+    enlarge x limits=0.07, % enlarges left and right limit, space before bar and edge of table
+    every node near coord/.append style={xshift=0.4cm,yshift=0.3cm,anchor=north,font=\footnotesize},
+     % style of numbers on bars
+    ]
+
+  \addplot+[ybar, black, fill=gray!50,pattern=north east lines] plot coordinates {(2012,19) (2013,35) (2014,36) (2015,48) (2016,67) (2017,102) (2018,102) (2019,145) (2020,130)};
+  \addplot+[ybar, black, fill=gray!50,pattern=dots] plot coordinates {(2012,16) (2013,20) (2014,22) (2015,31) (2016,40) (2017,39) (2018,51) (2019,53) (2020,13)};
+  \legend{Online\hspace{3mm} , On-site}
+\end{axis}
+
+\end{tikzpicture}
+
+\end{document}

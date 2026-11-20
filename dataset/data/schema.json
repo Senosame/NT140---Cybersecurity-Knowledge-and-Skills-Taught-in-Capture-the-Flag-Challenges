@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "Knowledge Units": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "keywords": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "name",
+                  "keywords"
+                ],
+                "maxProperties": 2
+              }
+            }
+          },
+          "required": [
+            "name",
+            "topics"
+          ],
+          "maxProperties": 2
+        }
+      }
+    },
+    "required": [
+      "name",
+      "Knowledge Units"
+    ],
+    "maxProperties": 2
+  }
+}

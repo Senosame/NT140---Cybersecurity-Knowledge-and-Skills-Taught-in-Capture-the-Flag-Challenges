@@ -1,0 +1,28 @@
+The following Knowledge Units did not appear in any jeopardy challenge writeup:
+
+* Physical Interfaces and Connectors
+
+The following Knowledge Units did not appear in any attack-defense challenge writeup:
+
+* Data Privacy
+* Design
+* Documentation
+* Ethics
+* Component Procurement
+* Component Testing
+* Component Reverse Engineering
+* Physical Media
+* Physical Interfaces and Connectors
+* Hardware Architecture
+* System Thinking
+* System Retirement
+* System Testing
+* Social and Behavioral Privacy
+* Usable Security and Privacy
+* Risk Management
+* Analytical Tools
+* Cybersecurity Planning
+* Security Operations
+* Cybercrime
+* Cyber Law
+* Cyber Policy

@@ -1,0 +1,33 @@
+\documentclass[border=5pt]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance = 0.8cm, thick]
+
+\node (1) {\shortstack{{\Large\faFileTextO}\\[2mm]CSEC2017\\curricula}};
+\node (2) [right=of 1] {\shortstack{{\Large\faCogs}\\[2mm]Manual\\extraction}};
+\node (3) [right=of 2] {\shortstack{{\Large\faFolderOpen}\\[2mm]1,623\\keywords}};
+\node (4) [below=of 1] {\shortstack{{\Large\faGlobe}\\[2mm]CTFtime\\website}};
+\node (5) [right=of 4] {\shortstack{{\Large\faFileCodeO}\\[2mm]Downloading\\script}};
+\node (6) [right=of 5] {\shortstack{{\Large\faFolderOpen}\\[2mm]15,963\\writeups}};
+\node (7) [below right=-0.5cm and 0.75cm of 3] {\shortstack{{\Large\faFileCodeO}\\[2mm]Analysis\\script}};
+\node (8) [right=of 7] {\shortstack{{\Large\faBarChart}\\[2mm]Keyword\\frequencies}};
+
+\draw[->] (1) -- (2);
+\draw[->] (2) -- (3);
+\draw[->] (4) -- (5);
+\draw[->] (5) -- (6);
+\draw[->] (3) -- (7);
+\draw[->] (6) -- (7);
+\draw[->] (3) -- (5);
+\draw[->] (7) -- (8);
+\end{tikzpicture}
+
+\end{document}
